@@ -37,7 +37,7 @@ function fetchMovies(query, page) {
                     fetchMovies(query, currentPage);
                 }
             } else {
-                moviesContainer.innerHTML = `<p>No results found for "${query}".</p>`;
+                moviesContainer.innerHTML = <p>No results found for "${query}".</p>;
             }
         })
         .catch(error => {
@@ -54,7 +54,7 @@ function displayMovies(movies) {
         movieCard.classList.add('movie-card');
 
         const moviePoster = movie.Poster !== "N/A" ? movie.Poster : 'image.png'; // Fallback image
-        movieCard.innerHTML = `
+        movieCard.innerHTML = 
             <a href="https://www.imdb.com/title/${movie.imdbID}" target="_blank" class="movie-link">
                 <img src="${moviePoster}" alt="${movie.Title} Poster">
                 <h2 class="movie-title">${movie.Title}</h2>
@@ -63,7 +63,7 @@ function displayMovies(movies) {
             <button class="heart-icon" data-id="${movie.imdbID}" data-title="${movie.Title}" data-poster="${moviePoster}" data-year="${movie.Year}">
                 ❤️
             </button>
-        `;
+        ;
         moviesContainer.appendChild(movieCard);
     });
 
