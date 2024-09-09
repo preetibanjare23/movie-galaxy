@@ -81,7 +81,7 @@ body {
    }
    
    /* Responsive Styles */
-   @media (width >= 768px) {
+   @media (width <= 768px) {
     .search-bar {
     flex-direction: column;
     }
@@ -92,7 +92,7 @@ body {
     }
    }
    
-   @media (width >= 576px) {
+   @media (width <= 576px) {
     .movies-container {
     grid-template-columns: 1fr;
     padding: 10px;
